@@ -19,8 +19,6 @@ interface IUniswapV2Pair {
 }
 
 contract ArbitrageScanner is Ownable {
-  uint public unlockTime;
-
   function getAmountOutMin(address router, address _tokenIn, address _tokenOut, uint256 _amount) public view returns (uint256) {
 		address[] memory path;
 		path = new address[](2);

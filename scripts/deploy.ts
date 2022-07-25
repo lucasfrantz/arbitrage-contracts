@@ -1,12 +1,12 @@
 import { ethers } from "hardhat";
 
 async function main() {
-  const Lock = await ethers.getContractFactory("ArbitrageScanner");
-  const lock = await Lock.deploy();
+  const Scanner = await ethers.getContractFactory("ArbitrageScanner");
+  const scanner = await Scanner.deploy();
 
-  await lock.deployed();
+  await scanner.deployed();
 
-  console.log("Scanner deployed to:", lock.address);
+  console.log("Scanner deployed to:", scanner.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
